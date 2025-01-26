@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "slitzzys-server-extras",
+	"version": "${version}",
+	"name": "Slitzzy's Server Extras",
+	"description": "This is a mod combining Create, Immersive Aircraft, and TaCZ to add fun new server content",
+	"authors": [
+		"Slitzzy"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/slitzzys-server-extras/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.slitzzy.slitzzysserverextras.SlitzzysServerExtras"
+		],
+		"fabric-datagen": [
+			"net.slitzzy.slitzzysserverextras.SlitzzysServerExtrasDataGenerator"
+		]
+	},
+	"mixins": [
+		"slitzzys-server-extras.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
