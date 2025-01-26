@@ -13,5 +13,6 @@ public class SlitzzysServerExtras implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Slitzzy's Server Extras Is Initialized");
 	}
 }
