@@ -11,11 +11,17 @@ base {
 }
 
 repositories {
-	// Add repositories to retrieve artifacts from in here.
-	// You should only use this when depending on other mods because
-	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
-	// for more information about repositories.
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "Modrinth"
+				url = "https://api.modrinth.com/maven"
+			}
+		}
+		filter {
+			includeGroup "maven.modrinth"
+		}
+	}
 }
 
 fabricApi {
@@ -32,7 +38,16 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	
+
+	modImplementation "maven.modrinth:tEJPA4Ty:2.3.8+1.20.1"
+	modImplementation "maven.modrinth:ohNO6lps:v8.0.1-1.20.1-Fabric"
+
+	modImplementation "maven.modrinth:x3HZvrj6:1.1.8+1.20.1"
+	modImplementation "maven.modrinth:SzzJttH8:1.0.2-hotfix3"
+	modImplementation "maven.modrinth:Xbc0uyRg:0.5.1-j-build.1631+mc1.20.1"
+
+
+
 }
 
 processResources {
